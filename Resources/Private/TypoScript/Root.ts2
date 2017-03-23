@@ -1,0 +1,42 @@
+namespace: NodeTypes=TYPO3.Neos.NodeTypes
+namespace: TypoScript=TYPO3.TypoScript
+
+prototype(NodeTypes:MultiColumn) {
+	templatePath = 'resource://Dotpulse.MultiColumn/Private/Templates/MultiColumn.html'
+	layout = ${q(node).property('layout')}
+	layoutMD = ${q(node).property('layoutMD')}
+	layoutLG = ${q(node).property('layoutLG')}
+	layoutXL = ${q(node).property('layoutXL')}
+	attributes.class = TypoScript:RawArray {
+		row = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? 'container' : 'row'}
+	}
+	columns.iterationName = 'multiColumnIteration'
+	container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]')}
+}
+
+prototype(NodeTypes:MultiColumnItem) {
+	@override.layoutSM = ${q(node).parent().property('layout')}
+	@override.layoutMD = ${q(node).parent().property('layoutMD')}
+	@override.layoutLG = ${q(node).parent().property('layoutLG')}
+	@override.layoutXL = ${q(node).parent().property('layoutXL')}
+
+	attributes.class = TypoScript:RawArray {
+		num = ${'col-num-' + (multiColumnIteration.index + 1)}
+		xs = 'col-xs-12'
+		sm = ${layoutSM ? 'col-sm-' + String.split(layoutSM, '-')[multiColumnIteration.index] : false}
+		md = ${layoutMD ? 'col-md-' + String.split(layoutMD, '-')[multiColumnIteration.index] : false}
+		lg = ${layoutLG ? 'col-lg-' + String.split(layoutLG, '-')[multiColumnIteration.index] : false}
+		xl = ${layoutXL ? 'col-xl-' + String.split(layoutXL, '-')[multiColumnIteration.index] : false}
+	}
+}
+
+prototype(Dotpulse.Base:FourColumnItem) < prototype(NodeTypes:MultiColumnItem) {
+	attributes.class {
+		sm = ${'col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index] * 2}
+		md = ${'col-md-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+	}
+}
+
+prototype(NodeTypes:FourColumn) {
+	columns.itemRenderer = Dotpulse.Base:FourColumnItem
+}
