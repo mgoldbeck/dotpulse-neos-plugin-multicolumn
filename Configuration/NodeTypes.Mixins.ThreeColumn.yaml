@@ -1,0 +1,167 @@
+'Dotpulse.MultiColumn:MixinThreeXS':
+  abstract: TRUE
+  properties:
+    layoutXS:
+      type: string
+      ui:
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutXS'
+        reloadIfChanged: TRUE
+        inspector:
+          group: column
+          position: 10
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: TRUE
+            values:
+              3-3-6:
+                label: '25% | 25% | 50%'
+                group: '1 Row'
+              3-6-3:
+                label: '25% | 50% | 25%'
+                group: '1 Row'
+              4-4-4:
+                label: '33% | 33% | 33%'
+                group: '1 Row'
+              6-3-3:
+                label: '50% | 25% | 33%'
+                group: '1 Row'
+              12-6-6:
+                label: '100% || 50% | 50%'
+                group: '2 Rows'
+              6-6-12:
+                label: '50% | 50% || 100%'
+                group: '2 Rows'
+
+
+'Dotpulse.MultiColumn:MixinThreeSM':
+  abstract: TRUE
+  properties:
+    layoutSM:
+      defaultValue: '4-4-4'
+      ui:
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutSM'
+        reloadIfChanged: TRUE
+        inspector:
+          group: column
+          position: 20
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: TRUE
+            values:
+              3-3-6:
+                label: '25% | 25% | 50%'
+                group: '1 Row'
+              3-6-3:
+                label: '25% | 50% | 25%'
+                group: '1 Row'
+              4-4-4:
+                label: '33% | 33% | 33%'
+                group: '1 Row'
+              6-3-3:
+                label: '50% | 25% | 33%'
+                group: '1 Row'
+              12-6-6:
+                label: '100% || 50% | 50%'
+                group: '2 Rows'
+              6-6-12:
+                label: '50% | 50% || 100%'
+                group: '2 Rows'
+
+'Dotpulse.MultiColumn:MixinThreeMD':
+  abstract: TRUE
+  properties:
+    layoutMD:
+      ui:
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutMD'
+        reloadIfChanged: TRUE
+        inspector:
+          group: column
+          position: 30
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: TRUE
+            values:
+              3-3-6:
+                label: '25% | 25% | 50%'
+                group: '1 Row'
+              3-6-3:
+                label: '25% | 50% | 25%'
+                group: '1 Row'
+              4-4-4:
+                label: '33% | 33% | 33%'
+                group: '1 Row'
+              6-3-3:
+                label: '50% | 25% | 33%'
+                group: '1 Row'
+              12-6-6:
+                label: '100% || 50% | 50%'
+                group: '2 Rows'
+              6-6-12:
+                label: '50% | 50% || 100%'
+                group: '2 Rows'
+
+'Dotpulse.MultiColumn:MixinThreeLG':
+  abstract: TRUE
+  properties:
+    layoutLG:
+      ui:
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutLG'
+        reloadIfChanged: TRUE
+        inspector:
+          group: column
+          position: 40
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: TRUE
+            values:
+              3-3-6:
+                label: '25% | 25% | 50%'
+                group: '1 Row'
+              3-6-3:
+                label: '25% | 50% | 25%'
+                group: '1 Row'
+              4-4-4:
+                label: '33% | 33% | 33%'
+                group: '1 Row'
+              6-3-3:
+                label: '50% | 25% | 33%'
+                group: '1 Row'
+              12-6-6:
+                label: '100% || 50% | 50%'
+                group: '2 Rows'
+              6-6-12:
+                label: '50% | 50% || 100%'
+                group: '2 Rows'
+
+'Dotpulse.MultiColumn:MixinThreeXL':
+  abstract: TRUE
+  properties:
+    layoutXL:
+      ui:
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutXL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: column
+          position: 50
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: TRUE
+            values:
+              3-3-6:
+                label: '25% | 25% | 50%'
+                group: '1 Row'
+              3-6-3:
+                label: '25% | 50% | 25%'
+                group: '1 Row'
+              4-4-4:
+                label: '33% | 33% | 33%'
+                group: '1 Row'
+              6-3-3:
+                label: '50% | 25% | 33%'
+                group: '1 Row'
+              12-6-6:
+                label: '100% || 50% | 50%'
+                group: '2 Rows'
+              6-6-12:
+                label: '50% | 50% || 100%'
+                group: '2 Rows'

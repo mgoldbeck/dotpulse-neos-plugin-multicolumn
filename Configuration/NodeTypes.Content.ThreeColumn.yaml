@@ -1,0 +1,34 @@
+'TYPO3.Neos.NodeTypes:ThreeColumn':
+  superTypes:
+    'Dotpulse.MultiColumn:MixinThreeSM': TRUE
+  childNodes:
+    column0:
+      constraints: &columnConstraints
+        nodeTypes:
+          'TYPO3.Neos.NodeTypes:TwoColumn': FALSE
+          'TYPO3.Neos.NodeTypes:ThreeColumn': FALSE
+          'TYPO3.Neos.NodeTypes:FourColumn': FALSE
+    column1:
+      constraints: *columnConstraints
+    column2:
+      constraints: *columnConstraints
+  ui:
+    inspector:
+      groups:
+        column:
+          label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:groups.column'
+  properties:
+    layout:
+      defaultValue: ''
+      ui:
+        inspector:
+          group: FALSE
+
+# 'TYPO3.Neos.NodeTypes:ThreeColumn':
+#     superTypes:
+#       'Dotpulse.MultiColumn:MixinThreeXS': TRUE
+#       'Dotpulse.MultiColumn:MixinThreeSM': TRUE
+#       'Dotpulse.MultiColumn:MixinThreeMD': TRUE
+#       'Dotpulse.MultiColumn:MixinThreeLG': TRUE
+#       'Dotpulse.MultiColumn:MixinThreeXL': TRUE
+#       'Dotpulse.MultiColumn:MixinAlign': TRUE

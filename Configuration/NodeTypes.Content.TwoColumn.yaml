@@ -1,0 +1,32 @@
+'TYPO3.Neos.NodeTypes:TwoColumn':
+  superTypes:
+    'Dotpulse.MultiColumn:MixinTwoSM': TRUE
+  childNodes:
+    column0:
+      constraints: &columnConstraints
+        nodeTypes:
+          'TYPO3.Neos.NodeTypes:TwoColumn': TRUE
+          'TYPO3.Neos.NodeTypes:ThreeColumn': FALSE
+          'TYPO3.Neos.NodeTypes:FourColumn': FALSE
+    column1:
+      constraints: *columnConstraints
+  ui:
+    inspector:
+      groups:
+        column:
+          label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:groups.column'
+  properties:
+    layout:
+      defaultValue: ''
+      ui:
+        inspector:
+          group: FALSE
+
+# 'TYPO3.Neos.NodeTypes:TwoColumn':
+#     superTypes:
+#       'Dotpulse.MultiColumn:MixinTwoXS': TRUE
+#       'Dotpulse.MultiColumn:MixinTwoSM': TRUE
+#       'Dotpulse.MultiColumn:MixinTwoMD': TRUE
+#       'Dotpulse.MultiColumn:MixinTwoLG': TRUE
+#       'Dotpulse.MultiColumn:MixinTwoXL': TRUE
+#       'Dotpulse.MultiColumn:MixinAlign': TRUE

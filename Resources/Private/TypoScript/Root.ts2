@@ -3,21 +3,29 @@ namespace: TypoScript=TYPO3.TypoScript
 
 prototype(NodeTypes:MultiColumn) {
 	templatePath = 'resource://Dotpulse.MultiColumn/Private/Templates/MultiColumn.html'
-	layoutXS = ${q(node).property('layoutXS')}
-	layout = ${q(node).property('layout')}
-	layoutMD = ${q(node).property('layoutMD')}
-	layoutLG = ${q(node).property('layoutLG')}
-	layoutXL = ${q(node).property('layoutXL')}
+
+	@override.isRoot = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]')}
+	@override.align = ${q(node).property('align') ? 'row-xs-' + q(node).property('align') : false}
+	container = ${isRoot}
+
 	attributes.class = TypoScript:RawArray {
-		row = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]') ? 'container' : 'row'}
+		row = ${isRoot ? 'container' : 'row'}
+		align = ${align && !isRoot ? align : false}
+	}
+
+	attributesRow = TypoScript:Attributes {
+		class = TypoScript:RawArray {
+			row = ${'row'}
+			align = ${align}
+		}
 	}
 	columns.iterationName = 'multiColumnIteration'
-	container = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]')}
 }
 
 prototype(NodeTypes:MultiColumnItem) {
 	@override.layoutXS = ${q(node).parent().property('layoutXS')}
-	@override.layoutSM = ${q(node).parent().property('layout')}
+	// Fallback for old system
+	@override.layoutSM = ${q(node).parent().property('layoutSM') ? q(node).parent().property('layoutSM') : q(node).parent().property('layout')}
 	@override.layoutMD = ${q(node).parent().property('layoutMD')}
 	@override.layoutLG = ${q(node).parent().property('layoutLG')}
 	@override.layoutXL = ${q(node).parent().property('layoutXL')}
@@ -33,9 +41,14 @@ prototype(NodeTypes:MultiColumnItem) {
 }
 
 prototype(Dotpulse.Base:FourColumnItem) < prototype(NodeTypes:MultiColumnItem) {
+	@override.layoutSM = ${q(node).parent().property('layoutSM')}
+	@override.hasNoLayout = ${!layoutXS&&!layoutSM&&!layoutMD&&!layoutLG&&!layoutXL}
 	attributes.class {
-		sm = ${'col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index] * 2}
-		md = ${'col-md-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+		xs = ${layoutXS ? 'col-xs-' + String.split(layoutXS, '-')[multiColumnIteration.index] : 'col-xs-12'}
+		sm = ${layoutSM ? 'col-sm-' + String.split(layoutSM, '-')[multiColumnIteration.index] : hasNoLayout ? 'col-sm-6' : false}
+		md = ${layoutMD ? 'col-md-' + String.split(layoutMD, '-')[multiColumnIteration.index] : hasNoLayout ? 'col-md-3' : false}
+		lg = ${layoutLG ? 'col-lg-' + String.split(layoutLG, '-')[multiColumnIteration.index] : false}
+		xl = ${layoutXL ? 'col-xl-' + String.split(layoutXL, '-')[multiColumnIteration.index] : false}
 	}
 }
 

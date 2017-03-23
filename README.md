@@ -22,10 +22,10 @@ composer require dotpulse/multicolumn
 
 ## Grid
 
-Minimal Grid Configuration
+Grid Configuration
 
 ```
-$grid-xs: 4, 6, 8, 12;
+$grid-xs: 3, 4, 6, 8, 12;
 $grid-sm: 2, 3, 4, 6, 8, 9, 10;
 $grid-md: 2, 3, 4, 6, 8, 9, 10;
 $grid-lg: 2, 3, 4, 6, 8, 9, 10;

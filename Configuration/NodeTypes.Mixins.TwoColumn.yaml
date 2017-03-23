@@ -3,151 +3,139 @@
   properties:
     layoutXS:
       type: string
-      defaultValue:
       ui:
-        label: 'Dotpulse.MultiColumn:NodeTypes.MixinXS:properties.layoutXS'
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutXS'
         reloadIfChanged: TRUE
         inspector:
           group: column
           position: 10
           editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
+            allowEmpty: TRUE
             values:
-              '':
-                label: ''
               4-8:
-                label: '33% / 66%'
+                label: '33% | 66%'
               6-6:
-                label: '50% / 50%'
+                label: '50% | 50%'
               8-4:
-                label: '66% / 33%'
+                label: '66% | 33%'
 
 'Dotpulse.MultiColumn:MixinTwoSM':
   abstract: TRUE
   properties:
-    layout:
+    layoutSM:
       defaultValue: '6-6'
       ui:
-        label: 'Dotpulse.MultiColumn:NodeTypes.MixinSM:properties.layout'
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutSM'
         reloadIfChanged: TRUE
         inspector:
+          group: column
           position: 20
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
+            allowEmpty: TRUE
             values:
-              '':
-                label: ''
-              50-50: ~
-              75-25: ~
-              25-75: ~
-              66-33: ~
-              33-66: ~
               2-10:
-                label: '16% / 84%'
+                label: '16% | 84%'
               3-9:
-                label: '25% / 75%'
+                label: '25% | 75%'
               4-8:
-                label: '33% / 66%'
+                label: '33% | 66%'
               6-6:
-                label: '50% / 50%'
+                label: '50% | 50%'
               8-4:
-                label: '66% / 33%'
+                label: '66% | 33%'
               9-3:
-                label: '75% / 25%'
+                label: '75% | 25%'
               10-2:
-                label: '84% / 16%'
+                label: '84% | 16%'
 
 'Dotpulse.MultiColumn:MixinTwoMD':
   abstract: TRUE
   properties:
     layoutMD:
       type: string
-      defaultValue:
       ui:
-        label: 'Dotpulse.MultiColumn:NodeTypes.MixinMD:properties.layoutMD'
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutMD'
         reloadIfChanged: TRUE
         inspector:
           group: column
           position: 30
           editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
+            allowEmpty: TRUE
             values:
-              '':
-                label: ''
               2-10:
-                label: '16% / 84%'
+                label: '16% | 84%'
               3-9:
-                label: '25% / 75%'
+                label: '25% | 75%'
               4-8:
-                label: '33% / 66%'
+                label: '33% | 66%'
               6-6:
-                label: '50% / 50%'
+                label: '50% | 50%'
               8-4:
-                label: '66% / 33%'
+                label: '66% | 33%'
               9-3:
-                label: '75% / 25%'
+                label: '75% | 25%'
               10-2:
-                label: '84% / 16%'
+                label: '84% | 16%'
 
 'Dotpulse.MultiColumn:MixinTwoLG':
   abstract: TRUE
   properties:
     layoutLG:
       type: string
-      defaultValue:
       ui:
-        label: 'Dotpulse.MultiColumn:NodeTypes.MixinLG:properties.layoutLG'
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutLG'
         reloadIfChanged: TRUE
         inspector:
           group: column
           position: 40
           editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
+            allowEmpty: TRUE
             values:
-              '':
-                label: ''
               2-10:
-                label: '16% / 84%'
+                label: '16% | 84%'
               3-9:
-                label: '25% / 75%'
+                label: '25% | 75%'
               4-8:
-                label: '33% / 66%'
+                label: '33% | 66%'
               6-6:
-                label: '50% / 50%'
+                label: '50% | 50%'
               8-4:
-                label: '66% / 33%'
+                label: '66% | 33%'
               9-3:
-                label: '75% / 25%'
+                label: '75% | 25%'
               10-2:
-                label: '84% / 16%'
+                label: '84% | 16%'
 
 'Dotpulse.MultiColumn:MixinTwoXL':
   abstract: TRUE
   properties:
     layoutXL:
       type: string
-      defaultValue:
       ui:
-        label: 'Dotpulse.MultiColumn:NodeTypes.MixinXL:properties.layoutXL'
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutXL'
         reloadIfChanged: TRUE
         inspector:
           group: column
           position: 50
           editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
+            allowEmpty: TRUE
             values:
-              '':
-                label: ''
               2-10:
-                label: '16% / 84%'
+                label: '16% | 84%'
               3-9:
-                label: '25% / 75%'
+                label: '25% | 75%'
               4-8:
-                label: '33% / 66%'
+                label: '33% | 66%'
               6-6:
-                label: '50% / 50%'
+                label: '50% | 50%'
               8-4:
-                label: '66% / 33%'
+                label: '66% | 33%'
               9-3:
-                label: '75% / 25%'
+                label: '75% | 25%'
               10-2:
-                label: '84% / 16%'
+                label: '84% | 16%'
