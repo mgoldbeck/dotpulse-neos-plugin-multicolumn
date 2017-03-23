@@ -4,8 +4,8 @@ namespace: TypoScript=TYPO3.TypoScript
 prototype(NodeTypes:MultiColumn) {
 	templatePath = 'resource://Dotpulse.MultiColumn/Private/Templates/MultiColumn.html'
 
-	@override.isRoot = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]')}
-	@override.align = ${q(node).property('align') ? 'row-xs-' + q(node).property('align') : false}
+	@context.isRoot = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]')}
+	@context.align = ${q(node).property('align') ? 'row-xs-' + q(node).property('align') : false}
 	container = ${isRoot}
 
 	attributes.class = TypoScript:RawArray {
@@ -23,11 +23,11 @@ prototype(NodeTypes:MultiColumn) {
 }
 
 prototype(NodeTypes:MultiColumnItem) {
-	@override.layoutXS = ${q(node).parent().property('layoutXS')}
-	@override.layoutSM = ${q(node).parent().property('layout')}
-	@override.layoutMD = ${q(node).parent().property('layoutMD')}
-	@override.layoutLG = ${q(node).parent().property('layoutLG')}
-	@override.layoutXL = ${q(node).parent().property('layoutXL')}
+	@context.layoutXS = ${q(node).parent().property('layoutXS')}
+	@context.layoutSM = ${q(node).parent().property('layout')}
+	@context.layoutMD = ${q(node).parent().property('layoutMD')}
+	@context.layoutLG = ${q(node).parent().property('layoutLG')}
+	@context.layoutXL = ${q(node).parent().property('layoutXL')}
 
 	attributes.class = TypoScript:RawArray {
 		num = ${'col-num-' + (multiColumnIteration.index + 1)}
@@ -40,7 +40,7 @@ prototype(NodeTypes:MultiColumnItem) {
 }
 
 prototype(Dotpulse.Base:FourColumnItem) < prototype(NodeTypes:MultiColumnItem) {
-	@override.hasNoLayout = ${!layoutXS&&!layoutSM&&!layoutMD&&!layoutLG&&!layoutXL}
+	@context.hasNoLayout = ${!layoutXS&&!layoutSM&&!layoutMD&&!layoutLG&&!layoutXL}
 	attributes.class {
 		xs = ${layoutXS ? 'col-xs-' + String.split(layoutXS, '-')[multiColumnIteration.index] : 'col-xs-12'}
 		sm = ${layoutSM ? 'col-sm-' + String.split(layoutSM, '-')[multiColumnIteration.index] : hasNoLayout ? 'col-sm-6' : false}
