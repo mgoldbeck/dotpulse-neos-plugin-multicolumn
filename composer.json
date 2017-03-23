@@ -2,7 +2,7 @@
     "name": "dotpulse/multicolumn",
     "type": "typo3-flow-plugin",
     "description": "Expand the settings for the Neos MultiColumn",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "require": {
         "typo3/neos-nodetypes": "^2.1"
     },

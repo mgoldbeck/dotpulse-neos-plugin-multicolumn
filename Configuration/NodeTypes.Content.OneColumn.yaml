@@ -1,0 +1,21 @@
+'TYPO3.Neos.NodeTypes:OneColumn':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    column0:
+      constraints: &columnConstraints
+        nodeTypes:
+          'TYPO3.Neos.NodeTypes:OneColumn': FALSE
+          'TYPO3.Neos.NodeTypes:TwoColumn': TRUE
+          'TYPO3.Neos.NodeTypes:ThreeColumn': TRUE
+          'TYPO3.Neos.NodeTypes:FourColumn': TRUE
+  ui:
+    label: 'Dotpulse.MultiColumn:NodeTypes.OneColumn:ui.label'
+    group: structure
+    icon: icon-square-o
+    position: 100
+
+'TYPO3.Neos:ContentCollection':
+  constraints:
+    nodeTypes:
+      'TYPO3.Neos.NodeTypes:OneColumn' : FALSE
