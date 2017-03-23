@@ -3,6 +3,7 @@ namespace: TypoScript=TYPO3.TypoScript
 
 prototype(NodeTypes:MultiColumn) {
 	templatePath = 'resource://Dotpulse.MultiColumn/Private/Templates/MultiColumn.html'
+	layoutXS = ${q(node).property('layoutXS')}
 	layout = ${q(node).property('layout')}
 	layoutMD = ${q(node).property('layoutMD')}
 	layoutLG = ${q(node).property('layoutLG')}
@@ -15,6 +16,7 @@ prototype(NodeTypes:MultiColumn) {
 }
 
 prototype(NodeTypes:MultiColumnItem) {
+	@override.layoutXS = ${q(node).parent().property('layoutXS')}
 	@override.layoutSM = ${q(node).parent().property('layout')}
 	@override.layoutMD = ${q(node).parent().property('layoutMD')}
 	@override.layoutLG = ${q(node).parent().property('layoutLG')}
@@ -22,7 +24,7 @@ prototype(NodeTypes:MultiColumnItem) {
 
 	attributes.class = TypoScript:RawArray {
 		num = ${'col-num-' + (multiColumnIteration.index + 1)}
-		xs = 'col-xs-12'
+		xs = ${layoutXS ? 'col-xs-' + String.split(layoutXS, '-')[multiColumnIteration.index] : 'col-xs-12'}
 		sm = ${layoutSM ? 'col-sm-' + String.split(layoutSM, '-')[multiColumnIteration.index] : false}
 		md = ${layoutMD ? 'col-md-' + String.split(layoutMD, '-')[multiColumnIteration.index] : false}
 		lg = ${layoutLG ? 'col-lg-' + String.split(layoutLG, '-')[multiColumnIteration.index] : false}

@@ -1,0 +1,6 @@
+'TYPO3.Neos.NodeTypes:TwoColumn':
+  superTypes:
+    'Dotpulse.MultiColumn:MixinTwoSM': TRUE
+    'Dotpulse.MultiColumn:MixinTwoMD': TRUE
+    'Dotpulse.MultiColumn:MixinTwoLG': TRUE
+    'Dotpulse.MultiColumn:MixinTwoXL': TRUE

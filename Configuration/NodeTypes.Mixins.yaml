@@ -1,19 +1,37 @@
-'TYPO3.Neos.NodeTypes:Column':
-  ui:
-    inspector:
-      groups:
-        column:
-          label: 'Dotpulse.MultiColumn:NodeTypes.Group:groups.column'
+'Dotpulse.MultiColumn:MixinTwoXS':
+  abstract: TRUE
+  properties:
+    layoutXS:
+      type: string
+      defaultValue:
+      ui:
+        label: 'Dotpulse.MultiColumn:NodeTypes.MixinXS:properties.layoutXS'
+        reloadIfChanged: TRUE
+        inspector:
+          group: column
+          position: 10
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              '':
+                label: ''
+              4-8:
+                label: '33% / 66%'
+              6-6:
+                label: '50% / 50%'
+              8-4:
+                label: '66% / 33%'
 
 'Dotpulse.MultiColumn:MixinTwoSM':
   abstract: TRUE
   properties:
     layout:
+      defaultValue: '6-6'
       ui:
         label: 'Dotpulse.MultiColumn:NodeTypes.MixinSM:properties.layout'
         reloadIfChanged: TRUE
         inspector:
-          position: 10
+          position: 20
           editorOptions:
             values:
               '':
@@ -49,7 +67,7 @@
         reloadIfChanged: TRUE
         inspector:
           group: column
-          position: 20
+          position: 30
           editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
             values:
@@ -81,7 +99,7 @@
         reloadIfChanged: TRUE
         inspector:
           group: column
-          position: 30
+          position: 40
           editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
             values:
@@ -113,7 +131,7 @@
         reloadIfChanged: TRUE
         inspector:
           group: column
-          position: 40
+          position: 50
           editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
             values:
@@ -133,15 +151,3 @@
                 label: '75% / 25%'
               10-2:
                 label: '84% / 16%'
-
-'TYPO3.Neos.NodeTypes:TwoColumn':
-  superTypes:
-    'Dotpulse.MultiColumn:MixinTwoSM': TRUE
-    'Dotpulse.MultiColumn:MixinTwoMD': TRUE
-    'Dotpulse.MultiColumn:MixinTwoLG': TRUE
-    'Dotpulse.MultiColumn:MixinTwoXL': TRUE
-
-  # properties:
-  #   layout:
-  #     ui:
-  #       label: 'Dotpulse.MultiColumn:NodeTypes.MixinSM:tabs.seo'

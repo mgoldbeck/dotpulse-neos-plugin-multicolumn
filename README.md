@@ -19,6 +19,18 @@ composer config repositories.multicolumn vcs ssh://hg@bitbucket.org/dotpulse/neo
 ```
 composer require dotpulse/multicolumn
 ```
+
+## Grid
+
+Minimal Grid Configuration
+
+```
+$grid-xs: 4, 6, 8, 12;
+$grid-sm: 2, 3, 4, 6, 8, 9, 10;
+$grid-md: 2, 3, 4, 6, 8, 9, 10;
+$grid-lg: 2, 3, 4, 6, 8, 9, 10;
+$grid-xl: 2, 3, 4, 6, 8, 9, 10;
+```
 * * *
 > ##### License Terms
 > DE: Dieses Package wird durch webexcess unter der [GNU GPLv3 Lizenz](https://choosealicense.com/licenses/gpl-3.0/) verwaltet. Dieses Package und darin enthaltene oder hinzugefügte Quellcodes können exklusiv durch webexcess in Teilen oder als Ganzes zusätzlich und unter eigenem Namen unter der MIT-Lizenz veröffentlicht werden.
