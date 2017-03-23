@@ -53,3 +53,17 @@ prototype(Dotpulse.Base:FourColumnItem) < prototype(NodeTypes:MultiColumnItem) {
 prototype(NodeTypes:FourColumn) {
 	columns.itemRenderer = Dotpulse.Base:FourColumnItem
 }
+
+prototype(NodeTypes:OneColumn) < prototype(NodeTypes:MultiColumn) {
+	templatePath = 'resource://Dotpulse.MultiColumn/Private/Templates/MultiColumn.html'
+
+	container = false
+	attributes.class = TypoScript:RawArray {
+		container = ${isRoot ? 'container' : false}
+		align = ${align ? align : false}
+	}
+	columns >
+	columns = ContentCollection {
+		nodePath = 'content'
+	}
+}

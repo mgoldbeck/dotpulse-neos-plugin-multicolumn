@@ -2,8 +2,9 @@
   superTypes:
     'TYPO3.Neos:Content': TRUE
   childNodes:
-    column0:
-      constraints: &columnConstraints
+    content:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
         nodeTypes:
           'TYPO3.Neos.NodeTypes:OneColumn': FALSE
           'TYPO3.Neos.NodeTypes:TwoColumn': TRUE
@@ -13,6 +14,7 @@
     label: 'Dotpulse.MultiColumn:NodeTypes.OneColumn:ui.label'
     group: structure
     icon: icon-square-o
+    inlineEditable: TRUE
     position: 100
 
 'TYPO3.Neos:ContentCollection':
