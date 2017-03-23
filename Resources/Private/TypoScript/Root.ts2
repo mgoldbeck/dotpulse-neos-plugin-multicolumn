@@ -6,17 +6,20 @@ prototype(NodeTypes:MultiColumn) {
 
 	@context.isRoot = ${q(node).parent().parent().is('[instanceof TYPO3.Neos:Document]')}
 	@context.align = ${q(node).property('align') ? 'row-xs-' + q(node).property('align') : false}
+	@context.onlyImages = ${q(node).find('[instanceof TYPO3.Neos.NodeTypes:Image][image]').count() == q(node).find('[instanceof TYPO3.Neos:Content]').count() ? 'multicolumn-only-images' : false}
 	container = ${isRoot}
 
 	attributes.class = TypoScript:RawArray {
 		row = ${isRoot ? 'container' : 'row'}
 		align = ${align && !isRoot ? align : false}
+		onlyImages = ${onlyImages && !isRoot ? onlyImages : false}
 	}
 
 	attributesRow = TypoScript:Attributes {
 		class = TypoScript:RawArray {
-			row = ${'row'}
+			row = 'row'
 			align = ${align}
+			onlyImages = ${onlyImages}
 		}
 	}
 	columns.iterationName = 'multiColumnIteration'
