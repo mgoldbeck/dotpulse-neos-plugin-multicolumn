@@ -17,10 +17,17 @@
           label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:groups.column'
   properties:
     layout:
-      defaultValue: ''
+      defaultValue: '6-6'
       ui:
         inspector:
-          group: FALSE
+          editorOptions:
+            values:
+              50-50: ~
+              25-75: ~
+              75-25: ~
+              33-66: ~
+              66-33: ~
+
 
 # 'TYPO3.Neos.NodeTypes:TwoColumn':
 #     superTypes:

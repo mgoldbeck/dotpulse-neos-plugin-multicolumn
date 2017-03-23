@@ -24,8 +24,7 @@ prototype(NodeTypes:MultiColumn) {
 
 prototype(NodeTypes:MultiColumnItem) {
 	@override.layoutXS = ${q(node).parent().property('layoutXS')}
-	// Fallback for old system
-	@override.layoutSM = ${q(node).parent().property('layoutSM') ? q(node).parent().property('layoutSM') : q(node).parent().property('layout')}
+	@override.layoutSM = ${q(node).parent().property('layout')}
 	@override.layoutMD = ${q(node).parent().property('layoutMD')}
 	@override.layoutLG = ${q(node).parent().property('layoutLG')}
 	@override.layoutXL = ${q(node).parent().property('layoutXL')}
@@ -41,7 +40,6 @@ prototype(NodeTypes:MultiColumnItem) {
 }
 
 prototype(Dotpulse.Base:FourColumnItem) < prototype(NodeTypes:MultiColumnItem) {
-	@override.layoutSM = ${q(node).parent().property('layoutSM')}
 	@override.hasNoLayout = ${!layoutXS&&!layoutSM&&!layoutMD&&!layoutLG&&!layoutXL}
 	attributes.class {
 		xs = ${layoutXS ? 'col-xs-' + String.split(layoutXS, '-')[multiColumnIteration.index] : 'col-xs-12'}

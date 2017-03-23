@@ -23,8 +23,8 @@
 'Dotpulse.MultiColumn:MixinTwoSM':
   abstract: TRUE
   properties:
-    layoutSM:
-      defaultValue: '6-6'
+    layout:
+      type: string
       ui:
         label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutSM'
         reloadIfChanged: TRUE

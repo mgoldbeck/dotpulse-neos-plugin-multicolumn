@@ -19,10 +19,13 @@
           label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:groups.column'
   properties:
     layout:
-      defaultValue: ''
+      defaultValue: '3-3-3-3'
       ui:
         inspector:
-          group: FALSE
+          editorOptions:
+            values:
+              '25-25-25-25': ~
+
 
 # 'TYPO3.Neos.NodeTypes:FourColumn':
 #     superTypes:

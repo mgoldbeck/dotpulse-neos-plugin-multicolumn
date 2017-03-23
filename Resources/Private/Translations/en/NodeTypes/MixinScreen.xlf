@@ -6,19 +6,19 @@
 				<source>Layout of columns from…</source>
 			</trans-unit>
 			<trans-unit id="properties.layoutXS" xml:space="preserve">
-				<source>…tiny screens (Smartphones)</source>
+				<source>tiny screens (Smartphones)</source>
 			</trans-unit>
 			<trans-unit id="properties.layoutSM" xml:space="preserve">
-				<source>…small screens (Tablets)</source>
+				<source>small screens (Tablets)</source>
 			</trans-unit>
 			<trans-unit id="properties.layoutMD" xml:space="preserve">
-				<source>…medium screens (Laptops)</source>
+				<source>medium screens (Laptops)</source>
 			</trans-unit>
 			<trans-unit id="properties.layoutLG" xml:space="preserve">
-				<source>…large screens (Desktops)</source>
+				<source>large screens (Desktops)</source>
 			</trans-unit>
 			<trans-unit id="properties.layoutXL" xml:space="preserve">
-				<source>…huge screens (Workstations)</source>
+				<source>huge screens (Workstations)</source>
 			</trans-unit>
 			<trans-unit id="values.group.one" xml:space="preserve">
 				<source>One row</source>

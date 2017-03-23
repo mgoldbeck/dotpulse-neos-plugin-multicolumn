@@ -2,6 +2,7 @@
   abstract: TRUE
   properties:
     layoutXS:
+      type: string
       ui:
         label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutXS'
         reloadIfChanged: TRUE
@@ -22,8 +23,8 @@
 'Dotpulse.MultiColumn:MixinFourSM':
   abstract: TRUE
   properties:
-    layoutSM:
-      defaultValue: '6-6-6-6'
+    layout:
+      type: string
       ui:
         label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutSM'
         reloadIfChanged: TRUE
@@ -45,7 +46,7 @@
   abstract: TRUE
   properties:
     layoutMD:
-      defaultValue: '3-3-3-3'
+      type: string
       ui:
         label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutMD'
         reloadIfChanged: TRUE
@@ -67,6 +68,7 @@
   abstract: TRUE
   properties:
     layoutLG:
+      type: string
       ui:
         label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutLG'
         reloadIfChanged: TRUE
@@ -88,6 +90,7 @@
   abstract: TRUE
   properties:
     layoutXL:
+      type: string
       ui:
         label: 'Dotpulse.MultiColumn:NodeTypes.MixinScreen:properties.layoutXL'
         reloadIfChanged: TRUE
