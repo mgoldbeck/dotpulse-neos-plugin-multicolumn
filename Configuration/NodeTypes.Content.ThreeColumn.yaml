@@ -38,3 +38,13 @@
 #       'Dotpulse.MultiColumn:MixinThreeLG': TRUE
 #       'Dotpulse.MultiColumn:MixinThreeXL': TRUE
 #       'Dotpulse.MultiColumn:MixinAlign': TRUE
+
+# With 2 Rows
+# 'TYPO3.Neos.NodeTypes:ThreeColumn':
+#     superTypes:
+#       'Dotpulse.MultiColumn:MixinThreeXS2Row': TRUE
+#       'Dotpulse.MultiColumn:MixinThreeSM2Row': TRUE
+#       'Dotpulse.MultiColumn:MixinThreeMD2Row': TRUE
+#       'Dotpulse.MultiColumn:MixinThreeLG2Row': TRUE
+#       'Dotpulse.MultiColumn:MixinThreeXL2Row': TRUE
+#       'Dotpulse.MultiColumn:MixinAlign': TRUE

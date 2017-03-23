@@ -28,7 +28,6 @@
               33-66: ~
               66-33: ~
 
-
 # 'TYPO3.Neos.NodeTypes:TwoColumn':
 #     superTypes:
 #       'Dotpulse.MultiColumn:MixinTwoXS': TRUE
